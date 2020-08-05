@@ -5,10 +5,20 @@ body {
     background: #075CB5;
     height: 62px;
 }
-.header-col {
-    display: flex;
-    align-items: center;
-    justify-content: start;
+.col {
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    &-button {
+        display: flex;
+        justify-content: flex-start;
+        &s {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
 }
 .logo-text {
     font-style: italic;
@@ -25,52 +35,73 @@ body {
 .text-indent {
     text-indent: 20px;
 }
-.cards div.card-block {
-    max-width: 255px;
-    margin-bottom: 23px;
-}
-.cards div.card-block img{
-    width: 100%;
-    min-width: 208px;
-    max-width: 253px;
-}
-.card-text {
-    padding: 15px;
-    &__big {
-        padding: 25px 27px 20px 34px;
+.card {
+    &-col-block {
+        margin-bottom: 23px;
+        img {
+            width: 100%;
+        }
+    }
+    &-text {
+        padding: 15px;
+        &__big {
+            padding: 25px 27px 20px 34px;
+        }
+    }
+    &-links {
+        &__big {
+            margin-top: 30px;
+        }
+    }
+    &-bottom {
+        margin-top: 96px;
+        &-block {
+            margin-bottom: 36px;
+        }
     }
 }
-.cards-bottom {
-    margin-top: 96px;
-}
-.card-bottom-block {
-    margin-bottom: 36px;
-}
-.card-links {
-    &__big {
-        margin-top: 30px;
+.link {
+    &-first {
+        display: inline-block;
+        margin-right: 25px;
     }
-}
-.link-first {
-    display: inline-block;
-    margin-right: 25px;
-}
-.link-second {
-    color: #014C8C;
+    &-second {
+        color: #014C8C;
+    }
 }
 .border-gray {
     border-color: #E5E5E5;
 }
+
+.button-small {
+    margin-right: 25px;
+}
+.card-col-block {
+    margin-bottom: 23px;
+    img {
+        width: 100%;
+    }
+}
 @media screen and (max-width: 1200px) {
-    .card-text {
-        padding: 13px;
-        &__big {
-            padding: 25px 27px 20px 34px;
+    .card {
+        &-text {
+            padding: 13px;
+            &__big {
+                padding: 25px 27px 20px 34px;
+            }
         }
     }
 }
 @media screen and (max-width: 992px) {
     html {
         font-size: 14px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .col-button {
+        width: 100%;
+        &s {
+            flex-wrap: wrap;
+        }
     }
 }

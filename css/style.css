@@ -7,7 +7,7 @@ body {
   height: 62px;
 }
 
-.header-col {
+.col-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,6 +17,24 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+}
+
+.col-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.col-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .logo-text {
@@ -34,15 +52,12 @@ body {
   text-indent: 20px;
 }
 
-.cards div.card-block {
-  max-width: 255px;
+.card-col-block {
   margin-bottom: 23px;
 }
 
-.cards div.card-block img {
+.card-col-block img {
   width: 100%;
-  min-width: 208px;
-  max-width: 253px;
 }
 
 .card-text {
@@ -53,16 +68,16 @@ body {
   padding: 25px 27px 20px 34px;
 }
 
-.cards-bottom {
+.card-links__big {
+  margin-top: 30px;
+}
+
+.card-bottom {
   margin-top: 96px;
 }
 
 .card-bottom-block {
   margin-bottom: 36px;
-}
-
-.card-links__big {
-  margin-top: 30px;
 }
 
 .link-first {
@@ -78,6 +93,18 @@ body {
   border-color: #E5E5E5;
 }
 
+.button-small {
+  margin-right: 25px;
+}
+
+.card-col-block {
+  margin-bottom: 23px;
+}
+
+.card-col-block img {
+  width: 100%;
+}
+
 @media screen and (max-width: 1200px) {
   .card-text {
     padding: 13px;
@@ -90,5 +117,15 @@ body {
 @media screen and (max-width: 992px) {
   html {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col-button {
+    width: 100%;
+  }
+  .col-buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
